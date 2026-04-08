@@ -1,0 +1,5 @@
+Apparently when I created this remote repo, I included a Licence which created a Main branch with a commit.
+Then I uploaded the Local Repository onto GitHub then I deleted it.
+The local repo wasn't pulling the Main branch hence the deletion. 
+
+I seriously need to refresh myself with Git and GitHub commands. 

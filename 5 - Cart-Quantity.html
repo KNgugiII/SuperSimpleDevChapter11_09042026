@@ -1,0 +1,72 @@
+<!DOCTYPE html>       <!--This implies that this is a HTML5 document type, ie the latest-->
+<html>
+  
+  <head>
+    <title>
+      Cart Quantity
+    </title>
+
+    <script>
+
+      function ShowQuantityFunc(){  /*Shows the cart as is*/
+        console.log(`Cart quantity: ${cartQuantityVar}`)
+      }//end function
+
+      function AddOneItem(){  /*Shows the cart after 1 item is added*/
+        //cartQuantityVar=cartQuantityVar+1
+        //cartQuantityVar+=1
+        cartQuantityVar++
+        console.log(`Cart quantity: ${cartQuantityVar}`);
+      }//end function
+
+      function AddTwoItems(){  /*Shows the cart after 2 items are added*/
+        //cartQuantityVar=cartQuantityVar+2
+        cartQuantityVar+=2
+        console.log(`Cart quantity: ${cartQuantityVar}`);
+      }//end function
+
+      function AddThreeItems(){  /*Shows the cart after 3 items are added*/
+        //cartQuantityVar=cartQuantityVar+3
+        cartQuantityVar+=3
+        console.log(`Cart quantity: ${cartQuantityVar}`);
+      }//end function
+
+      function RemoveItems(){  /*Removes all items from the cart*/
+        cartQuantityVar=0;
+        console.log(`Cart has been reset. Cart quantity: ${cartQuantityVar}`);
+      }//end function
+
+    </script>
+  </head>
+
+  <body>
+    <!--<h4>  Cart Quantity </h4>-->
+    <p>  Cart Quantity </p>
+    <button onclick=ShowQuantityFunc()> 
+      Show Quantity 
+    </button> 
+
+    <button onclick=AddOneItem()> 
+      Add to cart 
+    </button>
+
+    <button onclick=AddTwoItems()> 
+      +2 
+    </button>
+
+    <button onclick=AddThreeItems()> 
+      +3 
+    </button>
+
+    <button onclick=RemoveItems()> 
+      Reset Cart 
+    </button>
+
+    <script>
+        /*The below variable holds a value of the cart quantity*/
+        let cartQuantityVar=0;
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>   <!--This implies that this is a HTML5 document type-->
+<html>
+  <head>
+    <title>
+      Objects
+    </title>
+  </head>
+
+  <body>
+    <center>
+      <h1> Objects Practice </h1>
+    </center>
+
+    <script>
+      const Product = {
+        name: 'socks',
+        price: 1090
+      };
+
+      console.log(Product);
+      console.log(Product.price);
+
+      Product.name='Cotton socks' /*This illustrates how to amend the details in a property*/
+      console.log(Product.name)
+
+      Product.newproperty=true; /*This illustrates how to add a new property to an object*/
+      console.log(Product)
+
+      delete Product.newproperty; /*This illustrates how to delete a property from an object*/
+      console.log(Product);
+
+    </script>
+    
+    <hr>
+  </body>
+</html>

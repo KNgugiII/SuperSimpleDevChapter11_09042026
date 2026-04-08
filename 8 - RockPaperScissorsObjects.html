@@ -1,0 +1,128 @@
+<!DOCTYPE html>   <!--This implies that this is a HTML5 document type-->
+<html>
+  <head>
+    <title> ObjectsRockPaperScissors </title>
+
+    <script>
+      /*
+      The aim of this script is to ascertain which button was clicked and whether
+      it matched with what the computer had
+
+      Rock Wins Over Scissors
+      Rock Loses Over Paper
+      Rock Rock is a Tie
+      */
+
+        let RndmNum=Math.random();
+        let Outcome=''
+
+      /*This object is meant to house the outcome of the scores.*/
+      /*A reset button to return the scoreline to zero will also be available*/
+        const Score={
+          Wins:0,
+          Losses:0,
+          Ties:0
+        };
+      
+      function ResetScore(){
+        Score.Losses = 0;
+        Score.Wins = 0;
+        Score.Ties = 0;
+      }; 
+
+      function PlayGame(PlayerMove){
+
+        const CompPick=ComputerPick()
+
+        if (PlayerMove=='Rock'){
+          if (CompPick==='Rock'){
+              Outcome='That is a TIE';
+            } else if (CompPick==='Paper'){
+                Outcome='You LOOSE';
+            } else if (CompPick==='Scissors'){
+                Outcome='You WIN';
+            }//end if
+
+        } else if  (PlayerMove=='Paper'){
+          if (CompPick==='Paper'){
+            Outcome='That is a TIE';
+          } else if (CompPick==='Rock'){
+              Outcome='You WIN';
+          } else if (CompPick==='Scissors'){
+              Outcome='You LOOSE';
+          }//end if
+
+        } else if  (PlayerMove=='Scissors'){
+            if (CompPick==='Scissors'){
+              Outcome='That is a TIE';
+            } else if (CompPick==='Rock'){
+                Outcome='You LOOSE';
+            } else if (CompPick==='Paper'){
+                Outcome='You WIN';
+            }//end if
+        } 
+        
+        if (Outcome==='You WIN'){
+          Score.Wins+=1
+        } else if (Outcome==='You LOOSE'){
+          Score.Losses+=1
+        } else if (Outcome==='That is a TIE'){
+          Score.Ties+=1
+        }
+
+        alert(`You picked ${PlayerMove}. Computer picked ${CompPick}. ${Outcome}
+Wins:${Score.Wins} ,Losses:${Score.Losses}, Ties: ${Score.Ties}`
+        );
+      }
+
+      /*The below script generates a random value to establish the computer's pick*/
+      function ComputerPick(){
+
+        let CompPick='';
+
+        if (RndmNum>=0 && RndmNum<1/3){
+            CompPick='Rock';
+          } else if (RndmNum>=1/3 && RndmNum<2/3){
+            CompPick='Paper';
+          } else if (RndmNum>=2/3 && RndmNum<1){
+            CompPick='Scissors';
+        }//end if
+
+        return CompPick;
+
+      }//end if
+
+      /*The below script ascertains whether computer's pick matches the user's*/
+      function RockButtonClick(){
+
+        PlayGame('Rock');
+      }//end function
+
+      /*The below script ascertains whether computer's pick matches the user's*/
+      function PaperButtonClick(){
+
+        PlayGame('Paper');
+       }//end function 
+
+       /*The below script ascertains whether computer's pick matches the user's*/
+      function ScissorsButtonClick(){
+
+        PlayGame('Scissors');
+       }//end function
+    </script>
+  </head>
+
+  <body>
+    <p> Objects Rock Paper Scissors </p>
+
+    <input type="button" value="Rock" onclick=RockButtonClick()>
+
+    <input type="button" value="Paper" onclick=PaperButtonClick()>
+
+    <input type="button" value="Scissors" onclick= ScissorsButtonClick()>
+
+    <input type="button" value="Reset Score" onclick=ResetScore()>
+
+    <p> Click here to see the final version </p>
+  </body>
+</html>

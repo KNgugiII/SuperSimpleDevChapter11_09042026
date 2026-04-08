@@ -1,0 +1,43 @@
+<!DOCTYPE html>   <!--This implies that this is a HTML5 document type-->
+<html>
+  <head>
+    <title> Objects009 </title>
+
+      <link rel="stylesheet" href="styles/10 - RockPaperScissors.css">
+
+    <script src="scripts/10 - RockPaperScissors.js">
+      
+    </script>
+  </head>
+
+  <body>
+
+    <center>
+      <h1> Rock Paper Scissors Practice </h1>
+      <hr>
+    </center>
+
+    <p class="css-Header001"> Rock Paper Scissors </p>
+
+    <button value="Rock" onclick=RockButtonClick() class="css-move-button"> 
+      <img src="images\rock-emoji.png" class="css-move-icon"> 
+    </button>
+
+    <button value="Paper"  onclick=PaperButtonClick() class="css-move-button"> 
+      <img src="images\paper-emoji.png" class="css-move-icon"> 
+    </button>
+
+    <button value="Scissors" onclick=ScissorsButtonClick() class="css-move-button"> 
+      <img src="images\scissors-emoji.png" class="css-move-icon"> 
+    </button>
+
+    <br>
+    <p class='txtBxOutcome css-Result'> </p>
+
+    <p class='txtBxMyChoiceVsComputers'> </p>
+    
+    <p class='txtBxScores cs-score'> </p>
+
+    <input type="button" class="cs-resetButton" value="Reset Score" onclick=ResetScore()>
+  </body>
+</html>

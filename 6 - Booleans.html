@@ -1,0 +1,44 @@
+<!DOCTYPE html>       <!--This implies that this is a HTML5 document type-->
+<html>
+  <head>
+    <title>
+      Booleans
+    </title>
+  </head>
+
+  <body>
+    <script>
+      //The below illustrates how Boolean values are represented in Javascript
+      true
+      false
+
+      /*
+      When comparing to values, use === as opposed to ==
+      The latter will try to convert the values to similar datatypes first and then compare them.
+      For instance, a numeral and a text will be true;
+      */
+
+      console.log(5 == '5.0')
+
+      /*
+      When comparing to values, use '===' as opposed to ==
+      The first one does the comparison as is.
+      For instance, a numeral and a text will be false;
+      */
+
+      console.log(5==='5.0')
+
+
+      /*
+      The below will assess if a person is eligible to drive
+      */
+
+      if (36>18){
+        console.log('You can drive')
+      }else {
+        console.log('You cannot drive')
+      }//end if
+
+    </script>
+  </body>
+</html>

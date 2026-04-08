@@ -1,0 +1,41 @@
+<!DOCTYPE html>   <!--This implies that this is a HTML5 document type-->
+<html>
+  <head>
+    <title>
+      Functions
+    </title>
+  </head>
+
+  <body>
+    <center>
+      <h1> Functions Practice </h1>
+    </center>
+
+    <script>
+      function CalculateTaxA(){
+        /*This function show's how functions are created*/
+        console.log(1000*0.1);
+      }
+
+      CalculateTaxA();
+
+      function CalculateTaxB(Costparam){
+        /*This second function show's how functions make use of 1 parameter*/
+        console.log(Costparam*0.1);
+      }
+
+       CalculateTaxB(5000);
+
+       function CalculateTaxC(Costparam,TaxPercentparam=0.6){
+        /*This second function show's how functions make use of multiple parameters as well the use of default values*/
+        console.log(Costparam*TaxPercentparam);
+      }
+       
+       CalculateTaxC(3000,0.5);
+       CalculateTaxC(5000);
+
+    </script>
+    
+    <hr>
+  </body>
+</html>

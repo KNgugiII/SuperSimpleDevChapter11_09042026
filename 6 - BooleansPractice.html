@@ -1,0 +1,76 @@
+<!DOCTYPE html>       <!--This implies that this is a HTML5 document type-->
+<html>
+  <head>
+    <title>
+      RockPaperScissors
+    </title>
+
+    <script>
+      /*
+      The below script is meant to assess the User's selection against the computers.
+      If they match - Its a Win for the User.
+      If they DON'T match - Its a Fail for the User.
+      */
+
+      let rawValue=0;
+      let intValue=0;
+      let finalValue=0;
+      let endResult="";
+      let compAlgo="";
+      let finalOutcome="";
+
+      rawValue=Math.random();
+      intValue=Math.floor(rawValue);
+      finalValue=(intValue+1);
+
+      if (rawValue >= 0 && rawValue < 1/3){
+            compAlgo='Rock'
+            }else if(rawValue >= 1/3 && rawValue < 2/3){
+              compAlgo='Paper'
+            }else if(rawValue >= 2/3 && rawValue < 1){
+              compAlgo='Scissors'
+      }//end if
+
+      if (compAlgo==='Rock'){
+            endResult='Rock'
+          }else if (compAlgo==='Paper'){
+            endResult='Paper'
+          }else if (compAlgo==='Scissors'){
+            endResult='Scissors'
+      //end if
+
+      function computerValue(){
+         if (compAlgo === endResult) {
+          //finalOutcome='You Win'
+            alert('You Win');
+         } else {
+            //finalOutcome='You Loose'
+             alert('You Loose'); 
+           } // end if 
+         } // end if 
+      }//end function
+
+      alert(`You have clicked ${compAlgo} while the computer has chosen ${endResult}.`);
+
+    </script>
+
+  </head>
+
+  <body>
+    <p> Rock Paper Scissors </p>
+
+    <button type="button" onclick=computerValue()> Rock </button>
+
+    <button type="button" onclick=computerValue()> Paper </button>
+
+    <button type="button" onclick=computerValue()> Scissors </button>
+    <br>
+    <br>
+    <p> Click here to see the final version </p>
+
+    <script>
+      
+    </script>
+
+  </body>
+</html>

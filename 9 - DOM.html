@@ -1,0 +1,103 @@
+<!DOCTYPE html>   <!--This implies that this is a HTML5 document-->
+<html>
+  <head>
+    <title>
+      DOM
+    </title>
+  </head>
+
+  <body>
+    <center>
+      <h1> Document Object Model (DOM) Practice </h1>
+    </center>
+    <hr>
+
+    <p> YouTube Subscribe Button </p>
+    <button class='js-SubscribeButton001' onclick=updateSubscribebutton002()> 
+        Subscribe  
+    </button>
+    <br>
+    <br>
+    <br>
+
+    <p> Rock Paper Scissors </p>
+    <br>
+    <a href="9 - ObjectsRockPaperScissorsPart.html"> Click here </a>
+    <br>
+    <br>
+    <br>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input class="js-InputAmount" placeholder="Cost of Order" onkeydown=KeyDownEvent()>
+    <button onclick=CalculateShippingCost()> Calculate </button>
+    <br>
+    <p class="js-CalculatedValue"> </p>
+    <br>
+    <br>
+    <br>
+    <a href="https://www.google.com/"> CSS Version of these projects </a>
+
+
+    <script>
+
+      function updateSubscribebutton002(){
+        const sButton=document.querySelector('.js-SubscribeButton001');
+          
+        /*The dot innerText property captures a caption devoid of its leading & trailing spaces*/
+          if (sButton.innerText==='Subscribe'){
+              sButton.innerHTML='Subscribed'
+            }else {
+              sButton.innerHTML='Subscribe'
+          }//end if
+
+        
+      }//end function
+
+      /*The dot innerHTML property encounters challenges when the caption has leading & trailing spaces*/
+      function updateSubscribebutton001(){
+        const sButton=document.querySelector('.js-SubscribeButton001');
+          
+          if (sButton.innerHTML==='Subscribe'){
+              sButton.innerHTML='Subscribed'
+            }else {
+              sButton.innerHTML='Subscribe'
+          }//end if
+
+   
+      }//end function
+
+
+      let userValue=document.querySelector('.js-InputAmount');
+      let calculatedValue=document.querySelector('.js-CalculatedValue');
+      
+      /*This function calculates the shipping cost - if its above $40, no Shipping Fee is applied*/
+       function CalculateShippingCost(varAmount=Number(userValue.value)){
+        
+        const varCeiling=40;
+        const varShippingFee=10;
+        let varFinalCalculatedValue=0;
+
+        if (varAmount >= varCeiling){
+          varFinalCalculatedValue='$' + varAmount 
+          
+        }else if (varAmount < varCeiling) {
+          varFinalCalculatedValue='$' + (varAmount + varShippingFee) 
+
+        }//end if
+
+        calculatedValue.innerHTML=varFinalCalculatedValue
+
+      }//end function
+
+        /*This function checks if the KeyDown Event has been activated when Enter is clicked*/
+        function KeyDownEvent(param=event){
+          if (event.key === 'Enter'){
+            CalculateShippingCost()
+          }// end if
+        }
+
+    </script>
+  </body>
+</html>
